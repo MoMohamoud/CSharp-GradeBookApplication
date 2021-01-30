@@ -6,5 +6,6 @@
         Ranked,
         ESNU,
         OneToFour,
+        SixPoint
     }
 }

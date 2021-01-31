@@ -32,6 +32,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5) {
                 Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+                return;
             }
             else {
                 base.CalculateStatistics();
@@ -42,11 +43,10 @@ namespace GradeBook.GradeBooks
         public override void CalculateStudentStatistics(string name)
         {
 
-            var count = Students.Where(item => item.Grades == item.Grades).Count();
-
-            if (count < 5)
+            if (Students.Count < 5)
             {
                 Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+                return;
             }
             else
             {
